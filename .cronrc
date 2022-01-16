@@ -1,0 +1,10 @@
+#!/bin/bash
+cd "$(dirname "$0")"
+source .credentials
+export APP_DIR=/usr/local/app/
+export RESTIC_REPOSITORY="${APP_DIR}backups"
+export BACKUPED_FILE=$(find $APP_DIR -maxdepth 1 -name "*.csv")
+
+if [ ! -d $RESTIC_REPOSITORY ]; then
+    restic init;
+fi

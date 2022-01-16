@@ -1,0 +1,2 @@
+* * * * * /usr/local/app/updateRates.sh > /proc/1/fd/1 2>&1 
+* * * * * (date && /usr/local/app/backupRates.sh) > /proc/1/fd/1 2>&1
